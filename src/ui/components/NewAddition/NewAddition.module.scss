@@ -4,14 +4,10 @@
   background-color: $main_bg_color;
   flex-grow: 1;
   margin-right: 24px;
+  margin-bottom: 10px;
   border-radius: $main_border_radius;
   padding: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .new_addition_info {
@@ -53,6 +49,7 @@
   position: relative;
   border-radius: 0.3rem;
   overflow: hidden;
+  margin-right: 24px;
 
   img {
     margin-right: 0;
@@ -83,46 +80,61 @@
 .title_wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add_addition_button {
-   padding: 0.5rem;
-   border-radius: $main_border_radius;
-   background-color: $second_bg_color;
-   border: none;
-   margin-right: 0.5rem;
-   color: $main_text_color;
+  padding: 0.5rem;
+  border-radius: $main_border_radius;
+  background-color: $second_bg_color;
+  border: none;
+  margin-right: 0.5rem;
+  color: $main_text_color;
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transition: all $main_transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all $main_transition;
 
-   cursor: pointer;
+  cursor: pointer;
 
-   &:hover {
-      color: rgb(211, 211, 211);
-      background-color: rgb(72, 72, 72);
-   }
+  &:hover {
+    color: rgb(211, 211, 211);
+    background-color: rgb(72, 72, 72);
+  }
+}
+
+.addition_details_btn {
+  color: #939495;
+  transform: rotate(-90deg);
+  font-size: 1.6rem;
+  padding: 10px;
+  cursor: pointer;
+
+  transition: color $main_transition;
+  &:hover {
+    color: $main_text_color;
+  }
 }
 
 @media screen and (max-width: 678px) {
-   .new_addition {
-      margin-right: 10px;
-   }
-  
-   .addition_imgs,
-   .addition_more{
-      img {
-        width: 5rem;
-        height: 100%;
-        max-width: 100%;
-        margin-bottom: 5px;
-      }
+  .new_addition {
+    margin-right: 10px;
+  }
+
+  .addition_imgs,
+  .addition_more {
+    img {
+      width: 5rem;
+      height: 100%;
+      max-width: 100%;
+      margin-bottom: 5px;
     }
+  }
 }
 @media screen and (max-width: 392px) {
-   .new_addition {
-      margin-right: 0px;
-   }
+  .new_addition {
+    margin-right: 0px;
+  }
 }

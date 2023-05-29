@@ -17,7 +17,7 @@ const useGetData = () => {
         if (dataType === "additions") {
           dispatch(setAdditions(additions));
         }
-      }, 300);
+      }, 900);
     } catch (error) {
       setErrorMsg(errorMsg);
       console.error("Error fetching additions:", error);

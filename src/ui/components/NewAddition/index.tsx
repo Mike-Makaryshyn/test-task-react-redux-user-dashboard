@@ -16,10 +16,14 @@ const NewAddition: React.FC<NewAditionProps> = ({ books, profileViews }) => {
   return (
     <div className={styles.new_addition}>
       <div className={styles.title_wrapper}>
-        <button className={styles.add_addition_button}>
-          <AiOutlinePlus size={20} />
-        </button>
-        <span>New Addition</span>
+        <div className={styles.title_wrapper}>
+          <button className={styles.add_addition_button}>
+            <AiOutlinePlus size={20} />
+          </button>
+          <span>New Addition</span>
+        </div>
+
+        <span className={styles.addition_details_btn}>...</span>
       </div>
       <div className={styles.new_addition_info}>
         <div className={styles.addition_info_item}>

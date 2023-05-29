@@ -1,38 +1,34 @@
 @import "../../../globalStyles//variables.scss";
 
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  margin: 24px;
+.dashboard_top {
+  display: flex;
+  margin-right: 15px;
 }
 
-.tile {
-  background-color: $main_bg_color;
-  border-radius: $main_border_radius;
+.dashboard_top_left {
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
-.tile:nth-child(1) {
-  grid-area: 1 / 1 / 6 / 3;
-}
-.tile:nth-child(2) {
-  grid-area: 1 / 3 / 4 / 6;
-}
-.tile:nth-child(3) {
-  grid-area: 4 / 3 / 6 / 4;
-}
-.tile:nth-child(4) {
-  grid-area: 4 / 4 / 6 / 5;
-}
-.tile:nth-child(5) {
-  grid-area: 4 / 5 / 6 / 6;
+.dashboard_top_right {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  flex-wrap: wrap;
 }
 
 .new_addition_wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 24px;
+  margin: 10px 0px 0px 24px;
+}
+
+.material_completed_wrapper {
+   display: flex;
+   margin-left: 24px;
 }

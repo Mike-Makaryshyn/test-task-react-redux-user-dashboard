@@ -1,0 +1,41 @@
+@import "../../../globalStyles/variables.scss";
+
+.progress_wrapper {
+  text-align: center;
+  margin: 24px 0px 15px 24px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.progress_text {
+  color: $second_text_color;
+  margin-bottom: 1.5rem;
+
+  span {
+    display: block;
+  }
+}
+
+.progress_greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  span {
+    margin-right: 0.5rem;
+  }
+}
+
+.progress_planet {
+   margin-bottom: 1.5rem;
+}
+
+.progress_to_nex_level {
+   margin-bottom: 1.5rem;
+   color: $second_text_color;
+}

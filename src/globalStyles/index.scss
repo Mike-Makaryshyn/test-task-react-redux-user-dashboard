@@ -6,3 +6,9 @@ body {
   background-color: $body_bg_color;
   color: $main_text_color;
 }
+
+.tile {
+  background-color: $main_bg_color;
+  border-radius: $main_border_radius;
+  overflow: hidden;
+}
