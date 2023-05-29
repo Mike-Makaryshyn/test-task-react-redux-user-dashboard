@@ -1,0 +1,8 @@
+@import "normalize.css";
+@import "./reset.scss";
+@import "./variables.scss";
+
+body {
+  background-color: $body_bg_color;
+  color: $main_text_color;
+}

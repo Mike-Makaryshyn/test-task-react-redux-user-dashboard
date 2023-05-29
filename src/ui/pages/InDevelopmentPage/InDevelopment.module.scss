@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80dvh;
+}
+
+.title {
+  font-size: 3vw;
+  text-align: center;
+  color: #81b1ff;
+}
+
+.image {
+  max-width: 70%;
+  max-height: 55%;
+  object-fit: cover;
+  margin: 50px 10px;
+  border-radius: 2rem;
+}
