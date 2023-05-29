@@ -10,6 +10,7 @@
   color: $second_text_color;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transform: translateX(0.001rem);
+  transition: all $main_transition;
 }
 
 .logotype {
@@ -28,12 +29,15 @@
 
 .link_wrapper {
   transition: background $main_transition;
+  border-radius: $main_border_radius;
+
   position: relative;
 
   a {
     transition: color $main_transition;
     display: block;
-    padding: 0.9rem;
+    padding: 1rem 0.9rem;
+    margin: 0.3rem 0rem;
     height: 100%;
     width: 100%;
 
@@ -51,6 +55,18 @@
   }
 }
 
+.line {
+   width: 100%;
+   height: 0.07rem;
+   background-color: #333539;
+   position: absolute;
+   bottom: -1.1rem;
+}
+
+.lineAfterStatistics {
+   margin-bottom: 2rem;
+}
+
 .nav_icon {
   position: absolute;
   left: 1rem;
@@ -60,3 +76,16 @@
 
   object-fit: cover;
 }
+
+@media screen and (max-width: 900px) {
+  .layout_wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+

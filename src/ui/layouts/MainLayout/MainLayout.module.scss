@@ -5,3 +5,13 @@
 .right_side {
   flex-grow: 1;
 }
+
+@media screen and (max-width: 900px) {
+   .layout_wrapper {
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 768px) {
+ 
+}

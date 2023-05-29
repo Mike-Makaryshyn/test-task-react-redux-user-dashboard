@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import notofocationLogo from "../../../assets/icons/notification_icon.svg";
+import notificationLogo from "../../../assets/icons/notification_icon.svg";
 import avatar from "../../../assets/avatar.png";
 import searchIcon from "../../../assets/icons/search_icon.svg";
 
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           <option value="UA">UA</option>
         </select>
         <div className={styles.notification_wrapper}>
-          <img src={notofocationLogo} alt="Notification Logo" />
+          <img src={notificationLogo} alt="Notification Logo" />
         </div>
         <div className={styles.user}>
           <div className={styles.name_wrapper}>

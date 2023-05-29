@@ -114,3 +114,12 @@
   font-size: 0.7rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 756px) {
+  .header {
+    flex-direction: column;
+  }
+  .header_right {
+    margin-top: 20px;
+  }
+}

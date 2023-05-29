@@ -1,0 +1,128 @@
+@import "../../../globalStyles//variables.scss";
+
+.new_addition {
+  background-color: $main_bg_color;
+  flex-grow: 1;
+  margin-right: 24px;
+  border-radius: $main_border_radius;
+  padding: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.new_addition_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0rem;
+  background-color: $second_bg_color;
+  padding: 0.7rem 1rem;
+  border-radius: $main_border_radius;
+}
+
+.addition_info_item {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+
+.addition_imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: $main_border_radius;
+
+  img {
+    object-fit: cover;
+    display: block;
+
+    margin-right: 0.4rem;
+    max-width: 10vw;
+    height: 4vw;
+  }
+}
+
+.addition_more {
+  position: relative;
+  border-radius: 0.3rem;
+  overflow: hidden;
+
+  img {
+    margin-right: 0;
+  }
+}
+
+.addition_more_cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.addition_more_amount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.add_addition_button {
+   padding: 0.5rem;
+   border-radius: $main_border_radius;
+   background-color: $second_bg_color;
+   border: none;
+   margin-right: 0.5rem;
+   color: $main_text_color;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all $main_transition;
+
+   cursor: pointer;
+
+   &:hover {
+      color: rgb(211, 211, 211);
+      background-color: rgb(72, 72, 72);
+   }
+}
+
+@media screen and (max-width: 678px) {
+   .new_addition {
+      margin-right: 10px;
+   }
+  
+   .addition_imgs,
+   .addition_more{
+      img {
+        width: 5rem;
+        height: 100%;
+        max-width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+}
+@media screen and (max-width: 392px) {
+   .new_addition {
+      margin-right: 0px;
+   }
+}
