@@ -1,8 +1,24 @@
-import React from "react";
-import styles from "./HomePage.module.scss";
-import NewAddition from "../../components/NewAddition";
+import { useEffect } from "react";
 
+import useGetData from "../../../services/useGetData";
+import { useSelector } from "react-redux";
+import { AdditionInterface } from "../../../store/slices/additionsSlice";
+
+import NewAddition from "../../components/NewAddition";
+import Loader from "../../components/Loader";
+import Error from "../../components/Error";
+
+import styles from "./HomePage.module.scss";
 const HomePage: React.FC = () => {
+  const { getData, errorMsg } = useGetData();
+
+  const { additions, loading } = useSelector((state: any) => state.additions);
+
+  useEffect(() => {
+   if(!additions.length) getData('additions'); 
+  
+  }, []);
+
   return (
     <>
       <div className={styles.dashboard}>
@@ -12,10 +28,17 @@ const HomePage: React.FC = () => {
         <div className={`${styles.tile} ${styles.tile4}`}>Tile 4</div>
         <div className={`${styles.tile} ${styles.tile5}`}>Tile 5</div>
       </div>
+
       <div className={styles.new_addition_wrapper}>
-        <NewAddition profileViews={2873} books={13} />
-        <NewAddition profileViews={2873} books={13} />
-        <NewAddition profileViews={2873} books={13} />
+        {loading === "pending" && <Loader />}
+        {errorMsg && <Error errorMsg={errorMsg} />}
+        {additions.map((addition: AdditionInterface) => (
+          <NewAddition
+            key={addition.id}
+            profileViews={addition.profileViews}
+            books={addition.books}
+          />
+        ))}
       </div>
     </>
   );

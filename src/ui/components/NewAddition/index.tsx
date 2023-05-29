@@ -37,8 +37,12 @@ const NewAddition: React.FC<NewAditionProps> = ({ books, profileViews }) => {
         <img src={addition2} alt="Addition Image" />
         <div className={styles.addition_more}>
           <img src={addition2} alt="Addition More Image" />
-          <div className={styles.addition_more_cover}></div>
-          <span className={styles.addition_more_amount}>+10</span>
+          {books > 3 && (
+            <>
+              <div className={styles.addition_more_cover}></div>
+              <span className={styles.addition_more_amount}>+{books - 3}</span>
+            </>
+          )}
         </div>
       </div>
     </div>

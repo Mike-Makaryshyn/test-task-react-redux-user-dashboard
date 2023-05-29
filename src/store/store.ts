@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-export const reducers = {};
+import additionsSlice from "./slices/additionsSlice";
 
 export const store = configureStore({
-  reducer: reducers,
+  reducer: {
+    additions: additionsSlice,
+  },
   devTools: process.env.NODE_ENV !== "production",
 });
 
