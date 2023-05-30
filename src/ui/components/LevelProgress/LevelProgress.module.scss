@@ -65,3 +65,10 @@
     padding: 4px 10px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .progress_wrapper {
+    margin: 0;
+    margin-top: 24px;
+  }
+}

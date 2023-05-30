@@ -3,3 +3,11 @@
    display: flex;
    align-items: stretch;
 }
+
+
+@media screen and (max-width: 902px) {
+   .categories_completed_wrapper {
+     flex-direction: column;
+     gap: 10px;
+   } 
+}
