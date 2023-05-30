@@ -23,7 +23,7 @@ const LevelProgress: React.FC = () => {
           alt="Planet number 2 from 5 which represents your progress"
         />
 
-        <Circle progress={50} width="10rem" height="100%"/>
+        <Circle progress={37} width="10rem" height="100%"/>
 
         <div className={styles.progress_planet_level}>
           <p>4</p>

@@ -2,11 +2,15 @@
   position: relative;
   height: 20rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background-image: url("../../../assets/planets_bg.png");
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-  
+
   margin: 24px 0px 15px 0px;
 }
 
@@ -21,4 +25,37 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.planet_wrapper {
+  position: relative;
+  margin-right: 3rem;
+
+  .planet_img {
+    object-fit: contain;
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+.astronaut_img {
+  position: absolute;
+  object-fit: contain;
+  top: -2rem;
+  left: 40%;
+  z-index: 10;
+}
+
+.universe_completed {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
 }

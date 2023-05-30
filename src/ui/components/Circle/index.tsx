@@ -1,6 +1,6 @@
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import "./levelProgressCircle.scss";
+import "./Circle.scss";
 
 interface CircleProps {
   progress: number;
