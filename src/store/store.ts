@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import additionsSlice from "./slices/additionsSlice";
+import userDashboardSlice from "./slices/userDashboardSlice";
 
 export const store = configureStore({
   reducer: {
-    additions: additionsSlice,
+   userDashboard: userDashboardSlice,
   },
   devTools: process.env.NODE_ENV !== "production",
 });

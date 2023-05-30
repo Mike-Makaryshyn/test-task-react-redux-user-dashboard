@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 
-import useGetData from "../../../services/useGetData";
 import { useSelector } from "react-redux";
-import { AdditionInterface } from "../../../store/slices/additionsSlice";
+import { AdditionInterface } from "../../../store/slices/types";
+
+import useGetAdditions from "../../../services/useGetAdditions";
+import useGetCategories from "../../../services/useGetCategories";
 
 import NewAddition from "../../components/NewAddition";
 import Error from "../../components/Error";
@@ -14,12 +16,16 @@ import Categories from "../../components/Categories";
 import styles from "./HomePage.module.scss";
 
 const HomePage: React.FC = () => {
-  const { getData, errorMsg } = useGetData();
+  const { getAdditions, errorMsg } = useGetAdditions();
+  const { getCategories } = useGetCategories();
 
-  const { additions, loading } = useSelector((state: any) => state.additions);
+  const { additions, categories, loading } = useSelector(
+    (state: any) => state.userDashboard
+  );
 
   useEffect(() => {
-    if (!additions.length) getData("additions");
+    if (!additions.length) getAdditions();
+    if (!categories.length) getCategories();
   }, []);
 
   if (loading === "pending") {

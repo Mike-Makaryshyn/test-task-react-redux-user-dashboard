@@ -7,8 +7,11 @@ import astronaut from "../../../assets/astronaut.png";
 
 import styles from "./UniverseProgress.module.scss";
 import Circle from "../Circle";
+import { useSelector } from "react-redux";
 
 const UniverseProgress: React.FC = () => {
+  const { totalCompleted } = useSelector((state: any) => state.userDashboard);
+
   return (
     <>
       <div className={styles.universe}>
@@ -23,7 +26,7 @@ const UniverseProgress: React.FC = () => {
               src={astronaut}
               alt="Astronaut above the planet"
             />
-            <Circle progress={34} width="100%" height="100%" />
+            <Circle progress={totalCompleted} width="100%" height="100%" />
           </div>
           <div className={styles.planet_wrapper}>
             <img className={styles.planet_img} src={planet_3} alt="Planet" />
@@ -35,7 +38,7 @@ const UniverseProgress: React.FC = () => {
             <img className={styles.planet_img} src={planet_5} alt="Planet" />
           </div>
 
-          <div className={styles.universe_completed}>37% Completed</div>
+          <div className={styles.universe_completed}>{totalCompleted}% Completed</div>
         </div>
       </div>
     </>

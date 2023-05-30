@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 import notificationLogo from "../../../assets/icons/notification_icon.svg";
 import avatar from "../../../assets/avatar.png";
@@ -9,6 +10,8 @@ import styles from "./Header.module.scss";
 const Header: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
   const [selectValue, setSelectValue] = useState("EN");
+
+  const { user } = useSelector((state: any) => state.userDashboard);
 
   return (
     <header className={styles.header}>
@@ -45,7 +48,7 @@ const Header: React.FC = () => {
         </div>
         <div className={styles.user}>
           <div className={styles.name_wrapper}>
-            <p>Peter</p>
+            <p>{user}</p>
             <span>Admin</span>
           </div>
 

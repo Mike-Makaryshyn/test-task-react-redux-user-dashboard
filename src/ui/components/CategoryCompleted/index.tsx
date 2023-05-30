@@ -3,7 +3,6 @@ import styles from "./CategoryCompleted.module.scss";
 
 interface CategoryCompletedProps {
   icon: string;
-  progress: number;
   text: string;
   total: number;
   completed: number;
@@ -11,7 +10,6 @@ interface CategoryCompletedProps {
 
 const CategoryCompleted: React.FC<CategoryCompletedProps> = ({
   icon,
-  progress,
   total,
   completed,
   text,
@@ -20,7 +18,11 @@ const CategoryCompleted: React.FC<CategoryCompletedProps> = ({
     <div className={`${styles.completed_wrapper} tile`}>
       <div className={styles.category_left}>
         <img src={icon} alt="Category icon" />
-        <Circle progress={progress} width="3.5rem" height="100%" />
+        <Circle
+          progress={(completed * 100) / total}
+          width="3.5rem"
+          height="100%"
+        />
       </div>
       <div className={styles.category_right}>
         <div>
