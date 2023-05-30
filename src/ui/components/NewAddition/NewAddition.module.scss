@@ -8,6 +8,10 @@
   border-radius: $main_border_radius;
   padding: 1rem;
   flex-wrap: wrap;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .new_addition_info {
@@ -49,7 +53,7 @@
   position: relative;
   border-radius: 0.3rem;
   overflow: hidden;
-  margin-right: 24px;
+  margin-right: 5px;
 
   img {
     margin-right: 0;

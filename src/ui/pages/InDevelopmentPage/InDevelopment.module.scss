@@ -7,9 +7,12 @@
 }
 
 .title {
-  font-size: 3vw;
+  font-size: calc((1vw + 1vh) * 2);
   text-align: center;
   color: #81b1ff;
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
 
 .image {

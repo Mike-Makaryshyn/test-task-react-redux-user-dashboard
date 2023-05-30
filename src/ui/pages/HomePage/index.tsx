@@ -9,9 +9,9 @@ import Error from "../../components/Error";
 import Loader from "../../components/Loader";
 import LevelProgress from "../../components/LevelProgress";
 import UniverseProgress from "../../components/UniverseProgress";
+import Categories from "../../components/Categories";
 
 import styles from "./HomePage.module.scss";
-import MaterialCompleted from "../../components/MaterialCompleted";
 
 const HomePage: React.FC = () => {
   const { getData, errorMsg } = useGetData();
@@ -36,12 +36,7 @@ const HomePage: React.FC = () => {
 
           <div className={styles.dashboard_top_right}>
             <UniverseProgress />
-
-            <div className={styles.material_completed_wrapper}>
-              <MaterialCompleted />
-              <MaterialCompleted />
-              <MaterialCompleted />
-            </div>
+            <Categories />
           </div>
         </div>
       </div>

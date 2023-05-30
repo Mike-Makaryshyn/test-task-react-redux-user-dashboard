@@ -3,15 +3,18 @@
 .progress_wrapper {
   text-align: center;
   margin: 24px 0px 15px 24px;
+  max-width: 16rem;
+}
 
-  img {
-    object-fit: cover;
-  }
+.planet_img {
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
 }
 
 .progress_text {
   color: $second_text_color;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 
   span {
     display: block;
@@ -23,7 +26,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1.5rem;
 
   span {
@@ -32,10 +35,34 @@
 }
 
 .progress_planet {
-   margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
 }
 
-.progress_to_nex_level {
-   margin-bottom: 1.5rem;
-   color: $second_text_color;
+.progress_to_next_level {
+  margin-bottom: 2.5rem;
+  color: $second_text_color;
+}
+
+.progress_planet_level {
+  position: absolute;
+
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  span {
+    display: block;
+    font-style: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    display: inline-block;
+    padding: 4px 10px;
+  }
 }

@@ -22,11 +22,22 @@ const AppRoutes = () => {
         <Route path={"/"} element={<MainLayout />}>
           <Route index element={<Navigate to={URL_HOME} />} />
           <Route path={URL_HOME} element={<HomePage />} />
-          <Route path={URL_COURSES} element={<InDevelopmentPage />} />
-          <Route path={URL_LIBRARIES} element={<InDevelopmentPage />} />
-          <Route path={URL_STATISTICS} element={<InDevelopmentPage />} />
-          <Route path={URL_STATISTICS} element={<InDevelopmentPage />} />
-          <Route path={URL_USER_GUIDELINE} element={<InDevelopmentPage />} />
+          <Route
+            path={URL_COURSES}
+            element={<InDevelopmentPage page={"courses"} />}
+          />
+          <Route
+            path={URL_LIBRARIES}
+            element={<InDevelopmentPage page={"libraries"} />}
+          />
+          <Route
+            path={URL_STATISTICS}
+            element={<InDevelopmentPage page={"statistics"} />}
+          />
+          <Route
+            path={URL_USER_GUIDELINE}
+            element={<InDevelopmentPage page={"user guideline"} />}
+          />
           <Route
             path="*"
             element={<div>Page not found, try something else</div>}

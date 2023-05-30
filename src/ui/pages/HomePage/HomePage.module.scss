@@ -8,7 +8,8 @@
 .dashboard_top_left {
   display: flex;
   flex-direction: column;
-  width: 34%;
+  width: 30%;
+  margin-right: 24px;
   height: 100%;
   flex-wrap: wrap;
 }
@@ -16,7 +17,7 @@
 .dashboard_top_right {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -25,10 +26,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 0px 0px 24px;
-}
-
-.material_completed_wrapper {
-   display: flex;
-   margin-left: 24px;
+  margin: 10px 15px 0px 24px;
 }
